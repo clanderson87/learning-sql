@@ -1,1 +1,1 @@
-SSELECT COUNT (InvoiceId) FROM InvoiceLine WHERE InvoiceId == 37;
+SELECT COUNT (InvoiceId) FROM InvoiceLine WHERE InvoiceId == 37;
