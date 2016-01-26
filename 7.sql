@@ -1,3 +1,9 @@
 SELECT * FROM 
-(SELECT inv.InvoiceId, cus.SupportRepId FROM Invoice as inv LEFT JOIN Customer as cus ON inv.CustomerId = cus.CustomerId) as one
-LEFT JOIN Employee as two ON one.SupportRepId = two.EmployeeId;
+(
+SELECT inv.InvoiceId, cus.SupportRepId 
+FROM Invoice AS inv 
+LEFT JOIN Customer AS cus 
+ON inv.CustomerId = cus.CustomerId
+) AS tb1
+LEFT JOIN Employee 
+ON tb1.SupportRepId = Employee.EmployeeId;
