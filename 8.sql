@@ -1,7 +1,7 @@
 --Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers.
 
 SELECT
-Employee.FirstName as 'Sales Agent', Employee.LastName as 'Sales Agent Last Name', tbl1.'Invoice Total' as 'invoice total', tbl1.'Customer First Name' as 'Customer First Name', tbl1.'Customer Last Name' as 'Customer Last Name', tbl1.'Country' as 'Country'
+Employee.FirstName ||''|| Employee.LastName as 'Sales Agent Name', tbl1.'Invoice Total' as 'invoice total', tbl1.'Customer First Name' as 'Customer First Name', tbl1.'Customer Last Name' as 'Customer Last Name', tbl1.'Country' as 'Country'
 FROM
 (
 SELECT 
