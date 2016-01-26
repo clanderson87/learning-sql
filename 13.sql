@@ -1,4 +1,4 @@
-ELECT Artist.Name as 'Artist', tb2.*
+SELECT Artist.Name as 'Artist', tb2.*
 FROM Artist
 JOIN
 (
