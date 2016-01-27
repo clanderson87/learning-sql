@@ -1,11 +1,13 @@
-ELECT
-Employee.FirstName as 'Sales Agent', Employee.LastName as 'Sales Agent Last Name', lerft.'Invoice Total' as 'invoice total', lerft.'Customer First Name' as 'Customer First Name', lerft.'Customer Last Name' as 'Customer Last Name', lerft.'Country' as 'Country'
+--Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers.
+
+SELECT
+Employee.FirstName ||''|| Employee.LastName as 'Sales Agent Name', tbl1.'Invoice Total' as 'invoice total', tbl1.'Customer First Name' as 'Customer First Name', tbl1.'Customer Last Name' as 'Customer Last Name', tbl1.'Country' as 'Country'
 FROM
 (
 SELECT 
 Invoice.Total as 'Invoice Total', Customer.FirstName as 'Customer First Name', Customer.LastName as 'Customer Last Name', Customer.Country as 'Country', Customer.SupportRepId as 'Seller ID'
 FROM Invoice
 LEFT JOIN Customer ON Customer.CustomerId == Invoice.CustomerId
-) AS lerft
+) AS tbl1
 JOIN Employee
-ON lerft.'Seller ID'
+ON tbl1.'Seller ID'
